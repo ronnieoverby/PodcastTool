@@ -1,0 +1,7 @@
+C:\code\PodcastTool\PodcastTool\bin\Debug\PodcastTool.exe
+C:\code\PodcastTool\PodcastTool\bin\Debug\PodcastTool.pdb
+C:\code\PodcastTool\PodcastTool\bin\Debug\NAudio.dll
+C:\code\PodcastTool\PodcastTool\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\code\PodcastTool\PodcastTool\obj\x86\Debug\PodcastTool.exe
+C:\code\PodcastTool\PodcastTool\obj\x86\Debug\PodcastTool.pdb
+C:\code\PodcastTool\PodcastTool\bin\Debug\PodcastTool.exe.config
