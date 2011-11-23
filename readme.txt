@@ -1,3 +1,5 @@
+Watch the demo: http://youtu.be/w6_M7vv77f8
+
 PodcastTool.exe accepts single argument: the path to an MP3 file.
 
 The tool will
