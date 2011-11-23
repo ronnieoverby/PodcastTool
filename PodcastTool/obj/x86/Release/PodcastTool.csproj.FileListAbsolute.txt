@@ -1,0 +1,8 @@
+C:\Users\ronnie\Dropbox\Code\PodcastTool\PodcastTool\bin\Release\PodcastTool.exe.config
+C:\Users\ronnie\Dropbox\Code\PodcastTool\PodcastTool\bin\Release\PodcastTool.exe
+C:\Users\ronnie\Dropbox\Code\PodcastTool\PodcastTool\bin\Release\PodcastTool.pdb
+C:\Users\ronnie\Dropbox\Code\PodcastTool\PodcastTool\bin\Release\NAudio.dll
+C:\Users\ronnie\Dropbox\Code\PodcastTool\PodcastTool\bin\Release\taglib-sharp.dll
+C:\Users\ronnie\Dropbox\Code\PodcastTool\PodcastTool\obj\x86\Release\ResolveAssemblyReference.cache
+C:\Users\ronnie\Dropbox\Code\PodcastTool\PodcastTool\obj\x86\Release\PodcastTool.exe
+C:\Users\ronnie\Dropbox\Code\PodcastTool\PodcastTool\obj\x86\Release\PodcastTool.pdb
