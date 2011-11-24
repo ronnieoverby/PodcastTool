@@ -4,22 +4,32 @@ using System.Linq;
 using System.Text;
 using System.IO;
 using NAudio.Wave;
+using Args.Help;
+using Args;
+using Args.Help.Formatters;
 
 namespace PodcastTool
 {
     class Program
     {
         static void Main(string[] args)
-        {            
-            // check for passed in argument
-            if (args == null || !args.Any()) return;
+        {
+            var argsConfig = Args.Configuration.Configure<Options>();
+            Options options;
+            try
+            {
+                options = argsConfig.CreateAndBind(args);
+            }
+            catch (InvalidArgsFormatException)
+            {
+                ShowHelp(argsConfig);
+                return;
+            }
 
             // check file exists
-            string mp3Path = args[0];
+            var mp3Path = options.Path;
             if (!File.Exists(mp3Path)) return;
-                        
-            const int splitLength = 120; // seconds
-                        
+
             TagLib.Tag id3;
             using (var tagFile = TagLib.File.Create(mp3Path)) id3 = tagFile.Tag;
 
@@ -53,7 +63,7 @@ namespace PodcastTool
                     }
                 });
 
-                var showProgress = new Action(() => 
+                var showProgress = new Action(() =>
                 {
                     Console.WriteLine("{0}) {1}", splitI, Path.GetFileName(splitFilePath));
                 });
@@ -63,7 +73,7 @@ namespace PodcastTool
                 {
                     if (writer == null) createWriter();
 
-                    if ((int)reader.CurrentTime.TotalSeconds - secsOffset >= splitLength)
+                    if ((int)reader.CurrentTime.TotalSeconds - secsOffset >= options.SplitLength)
                     {
                         // time for a new file
                         writer.Dispose();
@@ -83,6 +93,16 @@ namespace PodcastTool
                     showProgress();
                 }
             }
+
+        }
+
+        private static void ShowHelp(IModelBindingDefinition<Options> argsConfig)
+        {
+            var helpProvider = new HelpProvider();
+            var help = helpProvider.GenerateModelHelp(argsConfig);
+            var helpFormatter = new ConsoleHelpFormatter();
+            Console.WriteLine(helpFormatter.GetHelp(help));
+            Console.ReadKey();
         }
     }
 }

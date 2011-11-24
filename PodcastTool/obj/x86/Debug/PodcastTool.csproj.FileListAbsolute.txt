@@ -13,3 +13,5 @@ C:\Users\ronnie\Dropbox\Code\PodcastTool\PodcastTool\bin\Debug\PodcastTool.pdb
 C:\Users\ronnie\Dropbox\Code\PodcastTool\PodcastTool\bin\Debug\NAudio.dll
 C:\Users\ronnie\Dropbox\Code\PodcastTool\PodcastTool\bin\Debug\taglib-sharp.dll
 C:\Users\ronnie\Dropbox\Code\PodcastTool\PodcastTool\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\ronnie\Dropbox\Code\PodcastTool\PodcastTool\bin\Debug\Args.dll
+C:\Users\ronnie\Dropbox\Code\PodcastTool\PodcastTool\bin\Debug\Args.xml
